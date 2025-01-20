@@ -1,0 +1,73 @@
+
+Create table tbAdministradores(
+CodigoAdmin int not null auto_increment,
+IDAdmin varchar(20) not null,
+NombreAdmin varchar(20) not null,
+ApellidoAdmin varchar(20) not null,
+FechaDeNacAdmin varchar(45) not null,
+CelularAdmin varchar(15) not null,
+TelefonoAdmin varchar(10),
+GeneroAdmin varchar(10) not null,
+CorreoAdmin varchar(50) not null,
+ContrasenaAdmin varchar(50) not null,
+primary key(CodigoAdmin));
+
+
+Create table tbProductos(
+CodigoProducto int not null auto_increment,
+NombreProducto varchar(40) not null,
+DescripcionProducto text not null,
+Procedimiento text not null,
+Observaciones text,
+Administrador int not null,
+ImagenProducto blob not null,
+UrlProducto varchar(100),
+primary key(CodigoProducto),
+foreign key(Administrador) references tbAdministradores(CodigoAdmin));
+
+
+Create table tbClientes(
+CodigoCliente int not null auto_increment,
+IDCliente varchar(20) not null,
+NombreCliente varchar(20) not null,
+ApellidoCliente varchar(20) not null,
+CorreoCliente varchar(50) not null,
+ContrasenaCliente varchar(50) not null,
+primary key(CodigoCliente));
+
+
+Create table tbComentarios(
+CodigoComentario int not null auto_increment,
+Comentario text not null,
+Producto int not null,
+Administrador int not null,
+Cliente int not null,
+primary key(CodigoComentario),
+foreign key(Producto) references tbProductos(CodigoProducto),
+foreign key(Administrador) references tbAdministradores(CodigoAdmin),
+foreign key(Cliente) references tbClientes(CodigoCliente));
+
+Create table tbIngredientes(
+CodigoIngrediente int not null auto_increment,
+NombreIngrediente varchar(100),
+Cantidad double,
+Producto int not null,
+primary key(CodigoIngrediente),
+foreign key(Producto) references tbProductos(CodigoProducto));
+
+
+Create table tbFavoritos(
+CodigoFavorito int not null auto_increment,
+Cliente int not null,
+Producto int not null,
+primary key(CodigoFavorito),
+foreign key(Producto) references tbProductos(CodigoProducto),
+foreign key(Cliente) references tbClientes(CodigoCliente));
+
+
+
+
+
+
+
+
