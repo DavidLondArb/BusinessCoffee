@@ -1,0 +1,206 @@
+@font-face{
+    font-family:fuente;
+    src: url(Coaster.otf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-size: 50px;
+    background-color: #E9A25A;
+    font-family: serif;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+form{
+    margin-top: 10px;
+}
+p{
+    font-size: 20px;
+}
+.contenedor{
+    width: 70%;
+    background-color: #FDC070;
+    margin: 30px;
+    overflow: hidden;
+    margin-right: 0px;
+    position:relative;
+    box-shadow: 10px 8px 10px black;
+    border: 5px solid #323232;
+    left:-30px;
+    border-radius:20px;
+    overflow: scroll;
+    height: 560px;
+    overflow-x:hidden; 
+}
+.contenedor::-webkit-scrollbar {
+    width: 8px;
+    background: #757575;
+}
+.contenedor::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 40px;
+    background-color: #EFD4A9;
+    
+}
+.contenedor::-webkit-scrollbar-thumb:hover {
+    background: #F3C67D;
+    border-radius: 20px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.contenedor::-webkit-scrollbar-track{
+    border-radius: 40px;
+
+}
+.group{ 
+    position:relative; 
+    margin-bottom:25px; 
+    color:black;
+}
+.formInput{
+    width: 100%;
+    border-radius: 10px;
+    position:relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #EFD4A9;
+    margin-top:0px;
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    border:none;
+    border-bottom:5px solid #757575;
+}
+input:focus{ 
+    outline:none; 
+}
+label{
+    font-size:18px;
+    position:absolute;
+    left:5px;
+    top:27px;
+    margin-left: 3%;
+    transition:0.2s ease all;
+}
+input:focus ~ label, input:valid ~ label{
+    top:-12px;
+    font-size:20px;
+    color:black;
+}
+#genero{
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+.boton{
+    display:block;
+    margin: 10%;
+    margin-top:40px;
+    margin-bottom:30px;
+}
+.bot{
+    background: #FC9E4F;
+    outline: 2px solid #948258;
+    height: 40px;
+    font-size:20px;
+    cursor: pointer;
+}
+.cancelar{
+    position: relative;
+    float: left;
+    width: 47%;
+    text-decoration: none;
+    color: black;
+    border: 2px solid gray;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 25px;
+    z-index: 9999999;
+}
+.cancelar:hover{
+    background: #FDAD5D;
+    transition: all .3s;
+}
+.ingresar{
+    position: relative;
+    float: right;
+    width: 47%;
+}
+.ingresar:hover{
+    background: #FDAD5D;
+    transition: all .3s;
+}
+.editar{
+    position: relative;
+    float: right;
+    width: 47%;
+}
+.edit{
+    margin: 5px !important;
+}
+.editar:hover{
+    background: #FDAD5D;
+    transition: all .3s;
+}
+.agregar{
+    position: relative;
+    float: right;
+    width: 47%;
+}
+.agregar:hover{
+    background: #FDAD5D;
+    transition: all .3s;
+}
+.registrar{
+    position: relative;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+}
+.registrar:hover{
+    background: #FC9E4F;
+    transition: all .3s;
+}
+#Logo{
+    width: 120px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+#titu{
+    font-size: 2.3em;
+    font-family: fuente;
+    text-align: center;
+    font-weight: 350;
+}
+.fondo{
+    padding: 10px;
+    background-color: #DE6B48;
+    box-shadow: 0 0 12px 1px rgba(23, 21, 21, 0.82);
+}
+.fondo2{
+    padding: 10px;
+    background-color: #DE6B48;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 0 12px 1px rgba(23, 21, 21, 0.82);
+}
+#ConfContraseña{
+    visibility: hidden;
+    padding: 10px;
+    background-color: #DE6B48;
+    box-shadow: 0 0 12px 1px rgba(23, 21, 21, 0.82);
+    text-align: center;
+    transition: all 0.2s ease;
+}
+.escondEdit{
+    display: none
+}
