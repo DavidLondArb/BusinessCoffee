@@ -1,0 +1,17 @@
+/* Identificadores */
+#imagP{
+    margin: 15px;
+    border: 7px solid #AF9154;
+    float: left;
+    cursor: auto;
+}
+#tit{
+    margin:0px;
+}
+.contenedor h2{
+    font-size: 1.2em !important;
+    margin: 15px !important;
+}
+@media (max-width: 767px) {
+    
+}

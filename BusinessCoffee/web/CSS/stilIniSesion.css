@@ -1,0 +1,215 @@
+@font-face{
+    font-family:fuente;
+    src: url(Coaster.otf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    font-size: 50px;
+    background-color: #E9A25A;
+    font-family: serif;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+form{
+    margin-top: 10px;
+}
+.contenedor{
+    width: 600px;
+    margin: 30px;
+    background-color: #FDC070;
+    overflow: hidden;
+    margin-right: 0px;
+    position:relative;
+    box-shadow: 10px 8px 10px black;
+    border: 5px solid #323232;
+    left:-30px;
+    border-radius:20px;
+}
+.group{ 
+    position:relative; 
+    margin-bottom:25px; 
+    color:black     ;
+}
+.formInput{
+    width: 100%;
+    border-radius: 10px;
+    position:relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #EFD4A9;
+    margin-top:0px;
+    font-size:18px;
+    padding:10px 10px 10px 5px;
+    border:none;
+    border-bottom:5px solid #757575;
+}
+input:focus{ 
+    outline:none; 
+}
+label{
+    font-size:18px;
+    position:absolute;
+    left:5px;
+    top:25px;
+    margin-left: 8%;
+    transition:0.2s ease all;
+}
+input:focus ~ label, input:valid ~ label{
+    top:-12px;
+    font-size:20px;
+    color:black;
+}
+.boton{
+    display:block;
+    margin: 10%;
+    margin-top:40px;
+    margin-bottom:30px;
+}
+.bot{
+    background: #DDAA61;
+    outline: 2px solid #948258;
+    height: 40px;
+    font-size:20px;
+    cursor: pointer;
+}
+.cancelar{
+    color: black;
+    padding: 0px 30px;
+    text-decoration: none;
+    width: 250px;
+    border: 2px solid #948258;
+    margin: 10px;
+    text-align: center;
+}
+.cancelar:hover{
+    background: #FC9E4F;
+    transition: all .3s;
+}
+.ingresar{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
+.ingresar:hover{
+    background: #FC9E4F;
+    transition: all .3s;
+}
+.registrar{
+    width: 250px;
+    color: black;
+    padding: 0px 30px;
+    text-decoration: none;
+    border: 2px solid #948258;
+    margin: 10px;
+    text-align: center;
+}
+.registrar:hover{
+    background: #FC9E4F;
+    transition: all .3s;
+}
+.abajo{
+    display: flex;
+    justify-content: space-between;
+}
+
+#Logo{
+    width: 120px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+#titu{
+    font-size: 2.3em;
+    font-family: fuente;
+    text-align: center;
+    font-weight: 350;
+}
+
+.contentido h2{
+    font-size: 40px;
+    color: white;
+}
+.elegirReg{
+    position:fixed;
+    top:-2000px;
+    left: 0;
+    z-index: 99999;
+    background: rgba(0,0,0,0.75);
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+.elegirReg .contentido{
+    width: 100%;
+    height:500px;
+    max-width: 500px;
+    position: fixed;
+    left: 50%;
+    top: -100vh;
+    transition: top 0.35s ease;
+    margin-left: -250px;
+    background: #FCA556;
+    box-shadow: 0 10px 2px rgba(23, 22, 22, 0.57);
+    z-index: 1000000;
+    border: 8px solid #A27348;
+    border-radius:20px;
+    text-align:center;
+} 
+.elegirReg header{
+    padding:20px;
+    border-bottom:8px solid #A27348;
+}
+#cuentas{
+    margin-top:20px;
+    text-decoration:none;
+    width:70%;
+    color:black;
+    background:#BA8A56;
+    padding:20px;
+    position:relative;
+    left:50%;
+    transform:translateX(-50%);
+    display:block;
+    border-radius:20px;
+    border: 8px solid #8C613C;
+    font-size:50px;
+}
+.cerrar{
+    color: black;
+    position: absolute;
+    bottom:0.2em;
+    right: 0.375em;
+    padding: 5px;
+    text-decoration:none;
+    font-size:30px;
+}
+.elegirReg a:hover{
+    color:orangered;
+}
+.elegirReg:target{
+    opacity:1;
+    top:0px;
+}
+.elegirReg:target .contentido{
+    top:70px;
+    transition: top 0.35s ease;
+}
+.fondo{
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: #DE6B48;
+    box-shadow: 0 0 12px 1px rgba(23, 21, 21, 0.82);
+    margin-bottom: 20px;
+}
